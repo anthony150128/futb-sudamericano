@@ -38,6 +38,11 @@
             font-weight: bold;
             color: #FFD700;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            background: url('https://images.pexels.com/photos/46798/pexels-photo-46798.jpeg') no-repeat center center/cover; /* Fondo relacionado con fútbol: balón y césped */
+            padding: 20px;
+            border-radius: 10px;
+            background-size: cover;
+            background-blend-mode: overlay;
         }
         header p {
             position: relative;
@@ -328,21 +333,29 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flamengo-RJ_%28BRA%29.png/200px-Flamengo-RJ_%28BRA%29.png" alt="Escudo Flamengo">
                         <h4>Flamengo</h4>
                         <p>6 títulos de Serie A, 3 Libertadores. Hincha más grande del mundo (40M).</p>
+                        <img src="https://images.pexels.com/photos/46798/pexels-photo-46798.jpeg" alt="Hinchada Flamengo" style="width: 200px; height: 150px; margin-top: 10px;">
                     </div>
                     <div class="club-card">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/S%C3%A3o_Paulo_FC.png/200px-S%C3%A3o_Paulo_FC.png" alt="Escudo São Paulo">
                         <h4>São Paulo</h4>
                         <p>6 títulos de Serie A, 3 Mundiales de Clubes. Casa de Kaká y Robinho.</p>
+                        <img src="https://images.pexels.com/photos/114907/pexels-photo-114907.jpeg" alt="Estadio São Paulo" style="width: 200px; height: 150px; margin-top: 10px;">
                     </div>
                 </div>
             </div>
             <div class="sub-seccion">
                 <h4>Jugadores Destacados</h4>
                 <p>Pelé (3 Mundiales), Neymar (Oro olímpico 2016), Ronaldinho (Balón de Oro 2005).</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Pel%C3%A9_%28cropped%29.jpg/200px-Pel%C3%A9_%28cropped%29.jpg" alt="Pelé" style="width: 150px; height: 200px; margin: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Neymar_Jr._with_Al-Hilal%2C_14_September_2023_-_03_%28cropped%29.jpg/200px-Neymar_Jr._with_Al-Hilal%2C_14_September_2023_-_03_%28cropped%29.jpg" alt="Neymar" style="width: 150px; height: 200px; margin: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Ronaldinho_Ga%C3%BAcho_2019.jpg/200px-Ronaldinho_Ga%C3%BAcho_2019.jpg" alt="Ronaldinho" style="width: 150px; height: 200px; margin: 10px;">
             </div>
             <div class="sub-seccion">
                 <h4>Datos Adicionales</h4>
                 <p>Estadio: Maracaná (78k espectadores). Hinchada: Torcida organizada. Récord: Más títulos de Copa América (9).</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Maracan%C3%A3_2014.jpg/200px-Maracan%C3%A3_2014.jpg" alt="Estadio Maracaná" style="width: 200px; height: 150px; margin: 10px;">
+                <img src="https://images.pexels.com/photos/46798/pexels-photo-46798.jpeg" alt="Hinchada organizada" style="width: 200px; height: 150px; margin: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Copa_Am%C3%A9rica_trophy.jpg/200px-Copa_Am%C3%A9rica_trophy.jpg" alt="Trofeo Copa América" style="width: 150px; height: 200px; margin: 10px;">
             </div>
             <button onclick="cerrarDetalles('brasil')">Cerrar</button>
         </div>
@@ -356,41 +369,5 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Escudo_del_Club_Atl%C3%A9tico_River_Plate.svg/200px-Escudo_del_Club_Atl%C3%A9tico_River_Plate.svg.png" alt="Escudo River Plate">
                         <h4>River Plate</h4>
                         <p>37 títulos locales, 4 Libertadores. Rival eterno de Boca.</p>
-                    </div>
-                    <div class="club-card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Boca_Juniors.svg/200px-Boca_Juniors.svg.png" alt="Escudo Boca Juniors">
-                        <h4>Boca Juniors</h4>
-                        <p>34 títulos locales, 6 Libertadores. La Bombonera es legendaria.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="sub-seccion">
-                <h4>Jugadores Destacados</h4>
-                <p>Messi (8 Balones de Oro), Maradona (Mundial 1986), Di María (Copa América 2021).</p>
-            </div>
-            <div class="sub-seccion">
-                <h4>Datos Adicionales</h4>
-                <p>Estadio: La Bombonera (54k). Hinchada: La 12. Récord: Más Copas América (15).</p>
-            </div>
-            <button onclick="cerrarDetalles('argentina')">Cerrar</button>
-        </div>
-        
-        <div id="detalles-uruguay" class="detalles-pais">
-            <h3>Uruguay - Primera División</h3>
-            <div class="sub-seccion">
-                <h4>Clubes Más Famosos</h4>
-                <div class="clubes">
-                    <div class="club-card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Pe%C3%B1arol_escudo.png/200px-Pe%C3%B1arol_escudo.png" alt="Escudo Peñarol">
-                        <h4>Peñarol</h4>
-                        <p>51 títulos locales, 5 Libertadores. El más laureado de Sudamérica.</p>
-                    </div>
-                    <div class="club-card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Club_Nacional_de_Football.png/200px-Club_Nacional_de_Football.png" alt="Escudo Nacional">
-                        <h4>Nacional</h4>
-                        <p>48 títulos locales, 3 Libertadores. Rival de Peñarol.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="sub-seccion">
-                <
+                        <img src="https://images.pexels.com/photos/114907/pexels-photo-114907.jpeg" alt="Estadio River Plate" style="width: 200px; height: 150px; margin-top: 10px;">
+                    </
