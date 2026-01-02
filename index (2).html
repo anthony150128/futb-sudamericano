@@ -16,7 +16,7 @@
         header {
             position: relative;
             height: 100vh;
-            background: url('https://images.pexels.com/photos/3184430/pexels-photo-3184430.jpeg') no-repeat center center/cover;
+            background: url('https://images.pexels.com/photos/114907/pexels-photo-114907.jpeg') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -84,6 +84,7 @@
             border-radius: 10px;
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
         }
         .liga-card:hover {
             transform: translateY(-10px);
@@ -93,6 +94,29 @@
             width: 80px;
             height: 80px;
             margin-bottom: 10px;
+        }
+        .detalles-pais {
+            display: none;
+            background-color: #111;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .detalles-pais h3 {
+            color: #FFD700;
+        }
+        .detalles-pais .sub-seccion {
+            margin-bottom: 20px;
+        }
+        .detalles-pais img {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
         }
         .clubes {
             display: flex;
@@ -227,151 +251,119 @@
     
     <section id="ligas">
         <h2 class="section-title">Ligas Sudamericanas</h2>
+        <p>Explora las ligas más apasionantes de Sudamérica. Haz clic en una para ver clubes, jugadores y más detalles.</p>
         <div class="ligas">
-            <div class="liga-card">
+            <div class="liga-card" onclick="mostrarDetalles('brasil')">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/200px-Flag_of_Brazil.svg.png" alt="Brasil">
                 <h3>Brasil - Serie A</h3>
-                <p>La liga más competitiva del mundo, con equipos como Flamengo y Palmeiras dominando el escenario internacional.</p>
+                <p>La liga más competitiva del mundo, con 20 equipos luchando por el título. Fundada en 1959, genera ingresos de más de $1.5 mil millones anuales. Conocida por su fútbol ofensivo y estrellas globales.</p>
             </div>
-            <div class="liga-card">
+            <div class="liga-card" onclick="mostrarDetalles('argentina')">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/200px-Flag_of_Argentina.svg.png" alt="Argentina">
                 <h3>Argentina - Primera División</h3>
-                <p>Conocida por su intensidad, River Plate y Boca Juniors son rivales eternos en el fútbol argentino.</p>
+                <p>Una de las ligas más antiguas (desde 1891), con 28 equipos. Famosa por su intensidad y rivalidades como Boca vs. River. Ha producido ídolos como Messi y Maradona.</p>
             </div>
-            <div class="liga-card">
+            <div class="liga-card" onclick="mostrarDetalles('uruguay')">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/200px-Flag_of_Uruguay.svg.png" alt="Uruguay">
                 <h3>Uruguay - Primera División</h3>
-                <p>Peñarol y Nacional lideran una liga rica en historia y talento, cuna de estrellas mundiales.</p>
+                <p>Liga con historia rica desde 1900, con 16 equipos. Uruguay ha ganado 2 Mundiales y es cuna de cracks como Suárez. Peñarol y Nacional dominan con 50+ títulos entre ambos.</p>
             </div>
-            <div class="liga-card">
+            <div class="liga-card" onclick="mostrarDetalles('colombia')">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/200px-Flag_of_Colombia.svg.png" alt="Colombia">
                 <h3>Colombia - Categoría Primera A</h3>
-                <p>Millonarios y Atlético Nacional compiten en una liga apasionada con hinchadas fervorosas.</p>
+                <p>Desde 1948, con 20 equipos. Conocida por su talento ofensivo y hinchadas apasionadas. Atlético Nacional ha ganado 16 títulos locales y 2 Libertadores.</p>
             </div>
-            <div class="liga-card">
+            <div class="liga-card" onclick="mostrarDetalles('ecuador')">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Flag_of_Ecuador.svg/200px-Flag_of_Ecuador.svg.png" alt="Ecuador">
                 <h3>Ecuador - Serie A</h3>
-                <p>Liga emergente con equipos como Emelec y Barcelona SC, destacando en competiciones continentales.</p>
+                <p>Fundada en 1957, con 16 equipos. Liga emergente que ha clasificado a Mundiales. Emelec (14 títulos) y Liga de Quito son potencias, con jugadores como Valencia.</p>
             </div>
-            <div class="liga-card">
+            <div class="liga-card" onclick="mostrarDetalles('chile')">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/200px-Flag_of_Chile.svg.png" alt="Chile">
                 <h3>Chile - Primera División</h3>
-                <p>Colo-Colo y Universidad de Chile dominan una liga con fuerte presencia en la Copa Libertadores.</p>
+                <p>Desde 1933, con 16 equipos. Colo-Colo (33 títulos) es el rey. Chile ha sido campeón de América y Copa Confederaciones, con Vidal y Sánchez como estrellas.</p>
             </div>
-            <div class="liga-card">
+            <div class="liga-card" onclick="mostrarDetalles('peru')">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/200px-Flag_of_Peru.svg.png" alt="Perú">
                 <h3>Perú - Liga 1</h3>
-                <p>Alianza Lima y Universitario son íconos en una liga con historia y pasión inigualable.</p>
+                <p>La liga más antigua de Sudamérica (desde 1912), con 18 equipos. Alianza Lima (23 títulos) y Universitario son clásicos. Perú ganó la Copa América 2019.</p>
             </div>
         </div>
-    </section>
-    
-    <section id="clubes">
-        <h2 class="section-title">Clubes Históricos</h2>
-        <div class="clubes">
-            <div class="club-card">
-                <img src="https://images.pexels.com/photos/3184430/pexels-photo-3184430.jpeg" alt="Flamengo">
-                <h3>Flamengo (Brasil)</h3>
-                <p>Campeón de la Copa Libertadores 2019, con una hinchada de más de 40 millones.</p>
-            </div>
-            <div class="club-card">
-                <img src="https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg" alt="River Plate">
-                <h3>River Plate (Argentina)</h3>
-                <p>4 veces campeón de la Libertadores, símbolo del fútbol argentino.</p>
-            </div>
-            <div class="club-card">
-                <img src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg" alt="Peñarol">
-                <h3>Peñarol (Uruguay)</h3>
-                <p>5 títulos de Libertadores, el club más laureado de Sudamérica.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="jugadores">
-        <h2 class="section-title">Jugadores Legendarios y Actuales</h2>
-        <div class="jugadores">
-            <div class="carrusel" id="carrusel">
-                <div class="jugador-card">
-                    <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg" alt="Pelé">
-                    <h3>Pelé (Brasil)</h3>
-                    <p>3 Mundiales ganados, el Rey del Fútbol.</p>
-                </div>
-                <div class="jugador-card">
-                    <img src="https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg" alt="Messi">
-                    <h3>Lionel Messi (Argentina)</h3>
-                    <p>8 Balones de Oro, ídolo del Barcelona y PSG.</p>
-                </div>
-                <div class="jugador-card">
-                    <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg" alt="Maradona">
-                    <h3>Diego Maradona (Argentina)</h3>
-                    <p>Mundial 1986, mano de Dios y gol del siglo.</p>
-                </div>
-                <div class="jugador-card">
-                    <img src="https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg" alt="Neymar">
-                    <h3>Neymar (Brasil)</h3>
-                    <p>Campeón olímpico 2016, estrella del PSG.</p>
+        
+        <!-- Detalles por país -->
+        <div id="detalles-brasil" class="detalles-pais">
+            <h3>Brasil - Serie A</h3>
+            <div class="sub-seccion">
+                <h4>Clubes Más Famosos</h4>
+                <div class="clubes">
+                    <div class="club-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flamengo-RJ_%28BRA%29.png/200px-Flamengo-RJ_%28BRA%29.png" alt="Flamengo">
+                        <h4>Flamengo</h4>
+                        <p>6 títulos de Serie A, 3 Libertadores. Hincha más grande del mundo (40M).</p>
+                    </div>
+                    <div class="club-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/S%C3%A3o_Paulo_FC.png/200px-S%C3%A3o_Paulo_FC.png" alt="São Paulo">
+                        <h4>São Paulo</h4>
+                        <p>6 títulos de Serie A, 3 Mundiales de Clubes. Casa de Kaká y Robinho.</p>
+                    </div>
                 </div>
             </div>
+            <div class="sub-seccion">
+                <h4>Jugadores Destacados</h4>
+                <p>Pelé (3 Mundiales), Neymar (Oro olímpico 2016), Ronaldinho (Balón de Oro 2005).</p>
+            </div>
+            <div class="sub-seccion">
+                <h4>Datos Adicionales</h4>
+                <p>Estadio: Maracaná (78k espectadores). Hinchada: Torcida organizada. Récord: Más títulos de Copa América (9).</p>
+            </div>
+            <button onclick="cerrarDetalles('brasil')">Cerrar</button>
         </div>
-        <button onclick="moverCarrusel(-1)">Anterior</button>
-        <button onclick="moverCarrusel(1)">Siguiente</button>
-    </section>
-    
-    <section id="competiciones">
-        <h2 class="section-title">Competiciones</h2>
-        <div class="competiciones">
-            <div class="comp-card">
-                <img src="https://images.pexels.com/photos/114907/pexels-photo-114907.jpeg" alt="Copa Libertadores">
-                <h3>Copa Libertadores</h3>
-                <p>La competición más prestigiosa de clubes en Sudamérica, con 47 ediciones.</p>
+        
+        <div id="detalles-argentina" class="detalles-pais">
+            <h3>Argentina - Primera División</h3>
+            <div class="sub-seccion">
+                <h4>Clubes Más Famosos</h4>
+                <div class="clubes">
+                    <div class="club-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Escudo_del_Club_Atl%C3%A9tico_River_Plate.svg/200px-Escudo_del_Club_Atl%C3%A9tico_River_Plate.svg.png" alt="River Plate">
+                        <h4>River Plate</h4>
+                        <p>37 títulos locales, 4 Libertadores. Rival eterno de Boca.</p>
+                    </div>
+                    <div class="club-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Boca_Juniors.svg/200px-Boca_Juniors.svg.png" alt="Boca Juniors">
+                        <h4>Boca Juniors</h4>
+                        <p>34 títulos locales, 6 Libertadores. La Bombonera es legendaria.</p>
+                    </div>
+                </div>
             </div>
-            <div class="comp-card">
-                <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg" alt="Copa Sudamericana">
-                <h3>Copa Sudamericana</h3>
-                <p>Segunda competición continental, para equipos no clasificados a la Libertadores.</p>
+            <div class="sub-seccion">
+                <h4>Jugadores Destacados</h4>
+                <p>Messi (8 Balones de Oro), Maradona (Mundial 1986), Di María (Copa América 2021).</p>
             </div>
-            <div class="comp-card">
-                <img src="https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg" alt="Eliminatorias">
-                <h3>Eliminatorias Sudamericanas</h3>
-                <p>Ruta a la Copa del Mundo, con 10 selecciones compitiendo por 4.5 plazas.</p>
+            <div class="sub-seccion">
+                <h4>Datos Adicionales</h4>
+                <p>Estadio: La Bombonera (54k). Hinchada: La 12. Récord: Más Copas América (15).</p>
             </div>
+            <button onclick="cerrarDetalles('argentina')">Cerrar</button>
         </div>
-    </section>
-    
-    <section id="datos">
-        <h2 class="section-title">Datos Curiosos</h2>
-        <div class="datos-curiosos">
-            <div class="dato-card">
-                <h3>Estadios Míticos</h3>
-                <p>El Maracaná (Brasil) ha visto finales épicas, con capacidad para 78.000 espectadores.</p>
+        
+        <!-- Repite para otros países: uruguay, colombia, ecuador, chile, peru -->
+        <div id="detalles-uruguay" class="detalles-pais">
+            <h3>Uruguay - Primera División</h3>
+            <div class="sub-seccion">
+                <h4>Clubes Más Famosos</h4>
+                <div class="clubes">
+                    <div class="club-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Pe%C3%B1arol_escudo.png/200px-Pe%C3%B1arol_escudo.png" alt="Peñarol">
+                        <h4>Peñarol</h4>
+                        <p>51 títulos locales, 5 Libertadores. El más laureado de Sudamérica.</p>
+                    </div>
+                    <div class="club-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Club_Nacional_de_Football.png/200px-Club_Nacional_de_Football.png" alt="Nacional">
+                        <h4>Nacional</h4>
+                        <p>48 títulos locales, 3 Libertadores. Rival de Peñarol.</p>
+                    </div>
+                </div>
             </div>
-            <div class="dato-card">
-                <h3>Hinchadas Más Famosas</h3>
-                <p>La Barra Brava de Boca Juniors es una de las más apasionadas del mundo.</p>
-            </div>
-            <div class="dato-card">
-                <h3>Récords Históricos</h3>
-                <p>Brasil tiene 5 Mundiales, el máximo en la historia del fútbol.</p>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <p>&copy; 2023 Fútbol Sudamericano. Todos los derechos reservados.</p>
-    </footer>
-
-    <script>
-        let indice = 0;
-        const carrusel = document.getElementById('carrusel');
-        const tarjetas = document.querySelectorAll('.jugador-card');
-        const total = tarjetas.length;
-
-        function moverCarrusel(direccion) {
-            indice += direccion;
-            if (indice < 0) indice = total - 1;
-            if (indice >= total) indice = 0;
-            carrusel.style.transform = `translateX(-${indice * 320}px)`;
-        }
-    </script>
-</body>
-</html>
+            <div class="sub-seccion">
+                <h4
